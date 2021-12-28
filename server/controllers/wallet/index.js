@@ -1,11 +1,14 @@
 import express from "express";
-import {newMnemonic, newWallet,getAccount,getWalletFromOutside} from "./wallet.js";
+import {newMnemonic, newWallet,getAccount,getWalletFromOutside,_getBalance,getTestEth} from "./wallet.js";
 
-const route = express.Router();
+const router = express.Router();
 
-route.get("/mnemonic",newMnemonic);
-route.post("/newwallet",newWallet);
-route.get("/account",getAccount);
-route.post("/outsidewallet",getWalletFromOutside);
+router.get("/mnemonic",newMnemonic);
+router.post("/newwallet",newWallet);
+router.get("/account",getAccount);
+router.post("/outsidewallet",getWalletFromOutside);
+router.get("/balance/:address",_getBalance);
 
-export default route;
+//test
+router.get("/testeth/:address",getTestEth)
+export default router;

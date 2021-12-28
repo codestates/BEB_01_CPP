@@ -1,6 +1,6 @@
 
 import { getMnemonic,generateNewWallet} from "../../wallet/index.js";
-import {ganacheAccount,getAccountFromDb,newAccountFromPrivateKey}  from "../../models/ethereum.js";
+import {ganacheAccount,getAccountFromDb,newAccountFromPrivateKey,getBalance,sendTestEth}  from "../../models/ethereum.js";
 const newMnemonic =  (req, res) =>{
     try {
         const mnemonic = getMnemonic();
@@ -44,7 +44,8 @@ const getAccount = async (req,res)=>{
     
 }
 
-const getWalletFromOutside = (privateKey) =>{
+const getWalletFromOutside = (req,res) =>{
+    const privateKey = req.body.privateKey;
     try {
         const accountFromOutside = newAccountFromPrivateKey(privateKey);
         res.send({address:accountFromOutside.address});
@@ -54,5 +55,29 @@ const getWalletFromOutside = (privateKey) =>{
     }
 }
 
+const _getBalance = async (req,res) =>{
+    const address = req.params.address;
+   
+    try {
+        const balance = await getBalance(address);
+        return res.send({balance});
+    } catch (error) {
+        console.log(error);
+        return res.status(502).send({error});
+    }
 
-export {newMnemonic, newWallet,getAccount,getWalletFromOutside};
+}
+
+//test
+const getTestEth = async (req,res)=>{
+    const address = req.params.address;
+    try {
+        const _send = await sendTestEth(address);
+        return res.send({message:"ok"});
+    } catch (error) {
+        console.log(error);
+        return res.status(502).send({error});
+    }
+}
+
+export {newMnemonic, newWallet,getAccount,getWalletFromOutside,_getBalance,getTestEth};

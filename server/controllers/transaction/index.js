@@ -1,7 +1,7 @@
 import express from "express";
 import {sendToken} from "./send.js";
-const route = express.Router();
+const router = express.Router();
 
-route.post("/send",sendToken);
+router.post("/send",sendToken);
 
-export default route;
+export default router;
