@@ -1,6 +1,6 @@
 import lightwallet from "eth-lightwallet";
 import { newAccountFromPrivateKey } from "../models/ethereum.js";
-export default (mnemonic, password,index,cb) => {
+export default (mnemonic, password,index,username,cb) => {
     try {
         return lightwallet.keystore.createVault(
             {

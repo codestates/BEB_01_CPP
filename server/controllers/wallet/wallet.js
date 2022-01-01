@@ -1,6 +1,6 @@
 
 import { getMnemonic,generateNewWallet} from "../../wallet/index.js";
-import {ganacheAccount,getAccountFromDb,newAccountFromPrivateKey,getBalance,sendTestEth}  from "../../models/ethereum.js";
+import {ganacheAccount,getAccountFromDb,newAccountFromPrivateKey,getBalance}  from "../../models/ethereum.js";
 const newMnemonic =  (req, res) =>{
     try {
         const mnemonic = getMnemonic();
@@ -15,8 +15,10 @@ const newWallet =  async (req, res) =>{
    // console.log(req.body);
     const password = req.body.password;
     const mnemonic = req.body.mnemonic;
+    const username = req.body.username;
+    const index = req.body.index || 0;
     try {
-        generateNewWallet(mnemonic, password,0, async (address,keystore)=>{
+        generateNewWallet(mnemonic, password,index,username, async (address,keystore)=>{
             //console.log(address);
             try {                
                 res.send({address});

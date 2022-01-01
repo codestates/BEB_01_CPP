@@ -1,5 +1,5 @@
 import express from "express";
-import {newMnemonic, newWallet,getAccount,getWalletFromOutside,_getBalance,getTestEth} from "./wallet.js";
+import {newMnemonic, newWallet,getAccount,getWalletFromOutside,_getBalance} from "./wallet.js";
 
 const router = express.Router();
 
@@ -9,6 +9,5 @@ router.get("/account",getAccount);
 router.post("/outsidewallet",getWalletFromOutside);
 router.get("/balance/:address",_getBalance);
 
-//test
-router.get("/testeth/:address",getTestEth)
+
 export default router;
