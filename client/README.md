@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+# Simple Opensea clone website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+간단한 기능을 가진 Opensea clone 사이트로, ERC-721, ERC-20과 관련된 정보를 얻을 수 있습니다.
 
-## Available Scripts
+### 기능
+1. Browse 탭을 통해 Opensea에 등록된 NFT들을 랜덤하게 가져오며 상세보기를 할 수 있습니다.
+2. Activity 탭을 통해 특정한 ERC-721의 컨트랙트에서 발행한 NFT와 MetaMask로 로그인한 주인이 가진 NFT들 목록을 확인 할 수 있습니다.
+3. Activity 탭에서 MetaMask로 로그인한 주인이 가진 NFT들을 다른 주소로 전송 할 수 있습니다.
+4. 로그인 아이콘탭에서 MetaMask로 로그인 할 수 있고 로그인 성공시 색상이 변경됩니다.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 주의사항
+- MetaMask를 로그아웃 하여도 로그인 아이콘 색상은 변경 되지 않습니다.
+- ERC-721 입력창에는 NFT를 발행한 ERC-721 컨트랙트 주소를 입력 해야 합니다.
+- NFT 전송 시, 전송 받은 상대방 주소도 같은 ERC-721 컨트랙트 주소로 조회해야합니다.
+- 전송받을 주소 입력창에 주소를 입력시 다른 NFT목록들의 전송 주소 입력창에도 동시에 입력됩니다.
+- Browse 탭을 통해 Opensea의 NFT목록을 받아 올 시 인터넷 상태 또는 해당 NFT의 이미지 파일 여부에 따라 출력되지 않을 수 있습니다.
