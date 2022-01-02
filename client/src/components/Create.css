@@ -1,0 +1,135 @@
+.mainset{
+    margin: 30px auto;
+    width: 800px;
+}
+
+.select-action__body-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+}
+
+
+.select-action__select-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 388px;
+    height: 278px;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    border-radius: 30px
+px
+;
+    margin-left: 22px;
+}
+
+
+
+.select-action__select-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.select-action__select-button .first-time-flow__button {
+    max-width: 221px;
+    height: 44px;
+    border-radius: 8px;
+}
+.btn--rounded.btn-primary {
+    background-color: #037dd6;
+}
+.select-action button {
+    font-weight: 500;
+    width: 221px;
+}
+.first-time-flow__button {
+    margin: 35px 0 14px;
+    width: 170px;
+    height: 44px;
+}
+.btn--rounded {
+    border-radius: 100px;
+    will-change: box-shadow;
+    transition: box-shadow cubic-bezier(0.6, -0.28, 0.735, 0.045) 200ms;
+}
+.btn-primary {
+    color: #fff;
+    border: 1px solid #037dd6;
+    background-color: #037dd6;
+}
+.button {
+    font-size: 0.875rem;
+    font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 140%;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 100%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+button {
+    border-style: none;
+    cursor: pointer;
+}
+* {
+    font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+사용자 에이전트 스타일시트
+button {
+    appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+}
