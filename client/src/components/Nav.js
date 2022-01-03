@@ -49,13 +49,10 @@ function Nav({ setmainaccount, setmainweb3, login }) {
             <span>
               <h2>
                 <Link to="/" className="title">
-                  {/* <img
-                    // src="https://storage.googleapis.com/opensea-static/Logomark/OpenSea-Full-Logo%20(dark).png"
-                    // height="28"
-                  /> */}
-
-                  <img height="28" src="./images/metamaskpng.png" />
-
+                  
+                <img src={'https://defipan.com/files/attach/images/164/502/001/44d4f3f523779cfef4aea5a00388990c.png'} 
+                
+                height="30"/>
 
                 </Link>
               </h2>
@@ -75,12 +72,12 @@ function Nav({ setmainaccount, setmainweb3, login }) {
           <ul className="menu-item-container">
             <li>
               <Link to="/browse" className="menu-item">
-                Browse (투표)
+                Vote
               </Link>
             </li>
             <li>
               <Link to="/activity" className="menu-item">
-                Activity
+                Send
               </Link>
             </li>
             {/* <li className="menu-item">
