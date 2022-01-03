@@ -1,6 +1,16 @@
-/* .mypage1{
+.mypage1{
     margin: 160px auto;
     width: 800px;
    
     flex:none;
-} */
+}
+
+.mypage-connect{
+
+    padding: 100px 100px 100px 100px;
+    margin: 160px auto;
+    width: 800px;
+   
+    flex:none;
+}
+

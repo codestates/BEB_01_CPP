@@ -11,6 +11,7 @@ import Activity from './components/Activity';
 import Browse from './components/Browse';
 import About from './components/About';
 import MyPage from './components/MyPage';
+import LogIn from './LogIn';
 import Footer from './components/HomeComponent/Footer';
 
 import erc20Abi from './abi/erc20Abi';
@@ -48,6 +49,9 @@ function App() {
         <Route exact={true} path="/" element={<Home account={mainaccount} />} />
         <Route path="/browse" element={<Browse onClickItem={onClickItem} />} />
         <Route path="/create" element={<Create account={mainaccount} />} />
+
+        <Route path="/create/login" element={<LogIn clickedItem={clickedItem} />} />
+
         <Route
           path="/activity"
           element={<Activity account={mainaccount} web3={mainweb3} />}

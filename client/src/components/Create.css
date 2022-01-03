@@ -90,16 +90,8 @@ button {
 사용자 에이전트 스타일시트
 button {
     appearance: auto;
-    -webkit-writing-mode: horizontal-tb !important;
-    font-style: ;
-    font-variant-ligatures: ;
-    font-variant-caps: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
-    font-family: ;
+    /* -webkit-writing-mode: horizontal-tb !important; */
+  
     text-rendering: auto;
     color: -internal-light-dark(black, white);
     letter-spacing: normal;

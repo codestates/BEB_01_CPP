@@ -18,7 +18,10 @@ function HomeComponent() {
                         <div className="LeftContent LeftContent2"><p>이더리움 및 분산형 웹에 연결합니다.</p></div>
                         <div className="LeftContent LeftContent3">
 
+
+                            <Link to="/mypage" >
                             <div className="LeftContent3-1">시작하기</div>
+                            </Link>
 
                             <Link to="/create" className="LeftContent3-2">
                              Create
