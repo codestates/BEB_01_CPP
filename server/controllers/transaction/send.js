@@ -1,4 +1,4 @@
-import {sendEth,unlockAccount,sendErc20} from "../../models/ethereum.js";
+import {sendErc20} from "../../models/ethereum.js";
 const sendToken = (req,res) =>{
     const _to = req.body.to;
     const _from = req.body.from;

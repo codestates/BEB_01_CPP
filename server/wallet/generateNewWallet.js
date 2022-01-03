@@ -1,6 +1,7 @@
 import lightwallet from "eth-lightwallet";
 import { newAccountFromPrivateKey } from "../models/ethereum.js";
-export default (mnemonic, password,index,username,cb) => {
+import {makeUser} from "../models/database/index.js";
+export default async (mnemonic, password,index,username,cb) => {
     try {
         return lightwallet.keystore.createVault(
             {
@@ -16,7 +17,9 @@ export default (mnemonic, password,index,username,cb) => {
                    let keystore =  ks.serialize();
                    const privateKey = ks.exportPrivateKey(address, pwDerivedKey);
                    const deployAccount = newAccountFromPrivateKey(`0x${privateKey}`);
-                   //db에 저장
+                    //db에 저장
+                   const uploadDB = await makeUser({username,password,address,privateKey});
+                  
                    cb(address,keystore);
                });
            }

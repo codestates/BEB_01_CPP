@@ -1,12 +1,20 @@
 import React from 'react';
 import "./Create.css";
 import { Link } from 'react-router-dom';
+//import _src from 'https://www.sgu.ac.kr/_res/sgu_mobile/img/common/prepare.jpg';
+import axios from "axios";
 // import HomeComponent1 from "./HomeComponent1";
 
 
 
 
 function Create() {
+  const getMnemonic = async () =>{
+    const mnemonic = await axios.get("http://localhost:8080/wallet/mnemonic");
+    //받아서 새로운 component 로 props 보내는거 해서
+    //axios.post("http://localhost:8080/wallet/newwallet",{mnemonic, password, username,index});
+    //새로운 account가 생성되어서 client로 return
+  }
 
     return (
       <div className="mainset">
@@ -18,7 +26,7 @@ function Create() {
         <div class="select-action__select-button">
 
 
-        {/* <img src={'https://www.sgu.ac.kr/_res/sgu_mobile/img/common/prepare.jpg'} /> */}
+        {/* <img src=_src /> */}
 
         
 
@@ -34,7 +42,7 @@ function Create() {
 
         
                
-        <button class="button btn--rounded btn-primary first-time-flow__button" role="button" tabindex="0">지갑 생성</button>
+        <button class="button btn--rounded btn-primary first-time-flow__button" role="button" tabindex="0" onClick={getMnemonic}>지갑 생성</button>
       
         
 

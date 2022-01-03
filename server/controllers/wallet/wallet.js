@@ -1,6 +1,7 @@
 
 import { getMnemonic,generateNewWallet} from "../../wallet/index.js";
-import {ganacheAccount,getAccountFromDb,newAccountFromPrivateKey,getBalance}  from "../../models/ethereum.js";
+import {getAccountFromDb,newAccountFromPrivateKey,getBalance,mintVoteToken}  from "../../models/ethereum.js";
+import {_getUser} from "../../models/database/index.js";
 const newMnemonic =  (req, res) =>{
     try {
         const mnemonic = getMnemonic();
@@ -20,8 +21,13 @@ const newWallet =  async (req, res) =>{
     try {
         generateNewWallet(mnemonic, password,index,username, async (address,keystore)=>{
             //console.log(address);
-            try {                
-                res.send({address});
+            try {               
+                if(await mintVoteToken(address,100)){
+                    res.send({address});
+                }
+                else{
+                    res.status(502).send({error:"fail mint"});
+                }
             } catch (error) {
                 console.log(error);
                 res.status(502).send({error});
@@ -37,7 +43,9 @@ const newWallet =  async (req, res) =>{
 
 const getAccount = async (req,res)=>{
     try {
-        const account = await ganacheAccount(); //ganache account -> db에서 불러오는 것으로 바꿔야함
+        const userId = req.params.userId;
+        const user = _getUser(userId);
+        const account = await getAccountFromDb(user.privateKey);
         res.send({account});
     } catch (error) {
         console.log(error);

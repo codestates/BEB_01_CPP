@@ -22,6 +22,7 @@ export default async (web3,name, symbol) =>{
                 console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
            }
         })
+        
         //console.log(cpptoken);
         return cpptoken;
     } catch (error) {

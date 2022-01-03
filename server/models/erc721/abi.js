@@ -156,12 +156,12 @@ export default [
 	},
 	{
 		"inputs": [],
-		"name": "getPrice",
+		"name": "getToken",
 		"outputs": [
 			{
-				"internalType": "uint256",
+				"internalType": "contract IERC20",
 				"name": "",
-				"type": "uint256"
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -195,6 +195,25 @@ export default [
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "target",
+				"type": "address"
+			}
+		],
+		"name": "isOwner",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "recipient",
 				"type": "address"
 			},
@@ -202,11 +221,6 @@ export default [
 				"internalType": "string",
 				"name": "tokenURI",
 				"type": "string"
-			},
-			{
-				"internalType": "address",
-				"name": "tokenAddress",
-				"type": "address"
 			}
 		],
 		"name": "mintNFT",
@@ -406,6 +420,19 @@ export default [
 				"internalType": "string",
 				"name": "",
 				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
