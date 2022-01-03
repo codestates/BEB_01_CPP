@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#mnemonic-container {
+  height: 200px;
+}
+
+#textarea-mne {
+  width: 500px;
+}
+
+.resultBox {
+  width: 800px;
+  margin: 20px;
+}

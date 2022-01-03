@@ -8,6 +8,13 @@ import { Link } from 'react-router-dom';
 
 function Create() {
 
+  // const getMnemonic = async () =>{
+  //   const mnemonic = await axios.get("http://localhost:8080/wallet/mnemonic%22");
+  //   받아서 새로운 component 로 props 보내는거 해서
+  //   axios.post("http://localhost:8080/wallet/newwallet%22,%7Bmnemonic, password, username,index});
+  //   새로운 account가 생성되어서 client로 return
+  // }
+
     return (
       <div className="mainset">
         
@@ -24,8 +31,17 @@ function Create() {
 
         <div class="select-action__button-text-big">아니요. 이미 비밀 복구 구문이 있습니다.</div>
         <div class="select-action__button-text-small">비밀 복구 구문을 사용하여 기존 지갑 가져오기</div>
-        <button class="button btn--rounded btn-primary first-time-flow__button" role="button" tabindex="0">지갑 가져오기</button>
-      </div>
+
+        
+        <Link to="/mypage">
+        <button class="button btn--rounded btn-primary first-time-flow__button" role="button" tabindex="0">
+                    지갑 가져오기
+        
+        </button>
+        </Link>
+
+
+        </div>
 
       <div class="select-action__select-button">
       
@@ -33,9 +49,12 @@ function Create() {
         <div class="select-action__button-text-small">새 지갑과 시드 구문을 만듭니다.</div>
 
         
-               
-        <button class="button btn--rounded btn-primary first-time-flow__button" role="button" tabindex="0">지갑 생성</button>
-      
+        <Link to="/create/login">
+                
+                <button class="button btn--rounded btn-primary first-time-flow__button" role="button" tabindex="0">
+                  지갑 생성
+                </button>
+        </Link>
         
 
       </div>
